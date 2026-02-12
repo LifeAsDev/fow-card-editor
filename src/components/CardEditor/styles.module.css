@@ -1,0 +1,98 @@
+.container {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: calc(var(--gap) * 2);
+	margin-bottom: 56px;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.panel {
+	background: var(--card);
+	border-radius: 12px;
+	padding: 16px;
+	border: 1px solid var(--glass);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	overflow-y: auto;
+}
+
+.title {
+	margin-bottom: 12px;
+	font-size: 1.1rem;
+}
+
+.label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-bottom: var(--gap);
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+
+.input,
+.select,
+.textarea {
+	background: var(--glass);
+	border: 1px solid var(--glass);
+	color: white;
+	padding: 8px;
+	border-radius: 6px;
+}
+
+.option {
+	background: var(--card);
+	color: white;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+	outline: none;
+	border-color: var(--accent);
+}
+
+.button {
+	margin-top: 12px;
+	background: var(--accent);
+	color: #020617;
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+}
+
+.previewName {
+	font-size: 1.2rem;
+	margin-bottom: 4px;
+}
+
+.previewMeta {
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+
+.previewStats {
+	margin: 8px 0;
+}
+
+.previewText {
+	white-space: pre-wrap;
+	font-size: 0.9rem;
+}
+
+.cardImage {
+	height: 480px;
+	margin: 0 auto;
+	margin-top: 8px;
+}
+
+.cardImage img {
+	height: 100%;
+	width: auto;
+	display: block;
+	border-radius: 20px;
+}

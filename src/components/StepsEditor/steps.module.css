@@ -1,0 +1,196 @@
+.step {
+	border: 3px solid #1e293b;
+	border-left: 3px solid #334155;
+	margin-bottom: 8px;
+	padding: 8px;
+	background-color: #0c1426;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.step input,
+.step select {
+	background: #020617;
+	color: #e5e7eb;
+	border: 1px solid #334155;
+	border-radius: 4px;
+	padding: 8px 6px;
+	font-size: 0.75rem;
+	width: 100%;
+}
+
+.step input {
+	padding-left: 12px;
+}
+.stepRow {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	width: 100%;
+}
+.stepRow > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkboxInput {
+	margin-right: 6px;
+}
+
+.stepActions {
+	display: flex;
+	gap: 6px;
+	margin-top: 6px;
+}
+
+.stepActions button {
+	background: #020617;
+	border: 1px solid #334155;
+	color: #94a3b8;
+	font-size: 0.7rem;
+	padding: 4px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.stepActions button:hover {
+	color: #e5e7eb;
+	border-color: #64748b;
+}
+/* Overlay */
+.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(2px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+/* Modal */
+.modal {
+	background: #0f172a; /* slate-900 */
+	border: 1px solid #1e293b;
+	border-radius: 12px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 12px 12px;
+	width: 320px;
+	height: 320px;
+	overflow: auto;
+}
+
+/* Search input */
+.modal input {
+	padding: 4px 14px;
+	border: none;
+	outline: none;
+	background: #020617;
+	color: #e5e7eb;
+	font-size: 14px;
+	border-bottom: 1px solid #1e293b;
+	border-radius: 12px;
+	margin-bottom: 12px;
+}
+
+.stepOption {
+	padding: 8px 12px;
+	cursor: pointer;
+	color: #e5e7eb;
+	background-color: #0f172a;
+	font-size: 14px;
+	border-bottom: 1px solid #1e293b;
+	border-top: 1px solid #1e293b;
+}
+
+.stepOption:hover {
+	background-color: #1e293b;
+}
+/* List */
+.list {
+	overflow-y: auto;
+}
+
+/* Item */
+.list div {
+	padding: 10px 14px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #e5e7eb;
+	font-size: 14px;
+}
+
+.item:hover {
+	background: #1e293b;
+}
+
+/* Optional keyboard highlight */
+.itemActive {
+	background: #2563eb;
+}
+
+/* Small hint text */
+.hint {
+	font-size: 11px;
+	color: #94a3b8;
+}
+
+/* Add button */
+.addButton {
+	margin-top: 8px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	background: #020617;
+	border: 1px dashed #334155;
+	color: #94a3b8;
+	cursor: pointer;
+}
+
+.addButton:hover {
+	background: #020617;
+	border-color: #64748b;
+	color: #e5e7eb;
+}
+
+.deleteButton {
+	padding: 6px 10px;
+	border-radius: 6px;
+	background: #020617;
+	color: #f87171;
+	cursor: pointer;
+}
+.deleteButton:hover {
+	background: #020617;
+	border-color: #f87171;
+	color: #fecaca;
+}
+
+.stepHeader {
+	display: flex;
+	flex-direction: row;
+}
+
+.stepLabel {
+	margin: auto;
+	margin-left: 12px;
+}
+
+.stepContainer {
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.stepContent {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	background-color: green;
+}

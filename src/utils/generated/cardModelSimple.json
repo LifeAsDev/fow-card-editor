@@ -1,0 +1,650 @@
+{
+  "generatedAt": "2026-02-09T22:10:08.115Z",
+  "fields": {
+    "name": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "Odin, Supreme God",
+        "Satan, God of the Fallen",
+        "Acolyte of the Sun",
+        "Angel of Zeus",
+        "Angrboda, Giant of the Setting Sun"
+      ]
+    },
+    "text": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "[b]Flying[/b]\nDiscard your hand: Recover this card. Play this ability only if you have one or more cards in your hand.\n[b]Faith[/b] - [b]Enter[/b] ⇒ Destroy all magic stones. If your ruler is astral, ",
+        "While you are searching your deck, you may pay [icon={R}] or [icon={B}] and reveal this card from your deck. If you do, remove this card from the game with a fallen counter on it.\nEnter ⇒ Choose one, ",
+        "[icon={Rest}] : Produce [icon={W}] .\n",
+        "[b]Flying[/b]\nTreat light magic stones you control also as water magic stones.\nLight magic stones you control with type magic stone gain \" [icon={Rest}] : Produce [icon={U}] .\".\nAs long as there is a ",
+        "[b]Barrier[/b] (Total cost 4 or less)\n[icon={W}] [icon={W}] [icon={1}] , discard this card: Destroy target rested J/resonator or target addition. You gain 1000 life.\n[b]Enter[/b] ⇒ Destroy target rest"
+      ]
+    },
+    "id": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "V4 Prerelease Party",
+        "V4 Buy a Box",
+        "DBV-001",
+        "DBV-002",
+        "DBV-003"
+      ]
+    },
+    "image": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "card_1.jpg",
+        "card_2.jpg",
+        "card_3.jpg",
+        "card_4.jpg",
+        "card_5.jpg"
+      ]
+    },
+    "atk": {
+      "types": [
+        "number"
+      ],
+      "examples": [
+        "1500",
+        "1400",
+        "200",
+        "400",
+        "500"
+      ]
+    },
+    "def": {
+      "types": [
+        "number"
+      ],
+      "examples": [
+        "1500",
+        "1400",
+        "200",
+        "400",
+        "1700"
+      ]
+    },
+    "type": {
+      "types": [
+        "array",
+        "string"
+      ],
+      "examples": [
+        "Resonator",
+        "Rune",
+        "[\"Rune\",\"Chant\"]",
+        "Addition",
+        "Chant"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "Addition",
+        "Chant",
+        "J-Ruler",
+        "Magic Stone",
+        "Master Rune",
+        "Resonator",
+        "Ruler",
+        "Rune"
+      ]
+    },
+    "cost": {
+      "types": [
+        "array"
+      ],
+      "examples": [
+        "[\"Water\"]",
+        "[\"Water\",\"Water\",\"Void\"]",
+        "[]",
+        "[\"Water\",\"Void\"]",
+        "[\"Water\",\"Water\",\"Void\",\"Void\"]"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "Darkness",
+        "Void",
+        "Water"
+      ]
+    },
+    "subtype": {
+      "types": [
+        "array",
+        "string"
+      ],
+      "examples": [
+        "Machine",
+        "Vampire",
+        "Skeleton",
+        "Spirit",
+        "Human"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "",
+        "Beast",
+        "Demon",
+        "Fallen Angel",
+        "Human",
+        "Machine",
+        "Skeleton",
+        "Spirit",
+        "Vampire",
+        "Wanderer",
+        "Zombie"
+      ]
+    },
+    "abilities": {
+      "types": [
+        "array"
+      ],
+      "examples": [
+        "[{\"trigger\":\"activate\",\"steps\":[{\"action\":\"filterCards\",\"state\":\"field\",\"count\":1,\"value\":\"me\"},{\"action\":\"cardCount\",\"from\":\"me\",\"value\":\"options\"},{\"action\":\"sendToDeck\",\"from\":\"self\",\"target\":\"disc",
+        "[{\"trigger\":\"continuous\",\"steps\":[{\"action\":\"getTotalCounterCount\",\"type\":\"+100/+100\",\"value\":\"counterCount\"},{\"action\":\"condition\",\"conditions\":[{\"op\":\">\",\"left\":\"counterCount\",\"right\":0}],\"value\":\"s",
+        "[{\"trigger\":\"activate\",\"steps\":[{\"action\":\"filterCards\",\"type\":\"Resonator\",\"subtype\":\"Machine\",\"state\":\"field\",\"owner\":1,\"value\":\"machines\"},{\"action\":\"cardCount\",\"from\":\"machines\",\"value\":\"machineCou",
+        "[{\"trigger\":\"automatic\",\"event\":\"enter\",\"steps\":[{\"action\":\"requireEventSource\",\"value\":\"condition1\"},{\"action\":\"checkActivateCost\",\"conditions\":[{\"op\":\"==\",\"left\":\"condition1\",\"right\":1}]},{\"action\":",
+        "[{\"trigger\":\"activate\",\"steps\":[{\"action\":\"peekDeckCards\",\"from\":\"deck\",\"count\":60,\"value\":\"looked\"},{\"action\":\"chooseCardFrom\",\"from\":\"looked\",\"count\":1,\"value\":\"selected\"},{\"action\":\"sendToDeck\",\"fr"
+      ],
+      "arrayElementTypes": [
+        "object"
+      ]
+    },
+    "att": {
+      "types": [
+        "array",
+        "string"
+      ],
+      "examples": [
+        "Water",
+        "Darkness",
+        "[\"Water\"]",
+        "[\"Darkness\"]",
+        "Void"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "Darkness",
+        "Void",
+        "Water"
+      ]
+    },
+    "keywords": {
+      "types": [
+        "array"
+      ],
+      "examples": [
+        "[\"Quickcast\"]",
+        "[\"Flying\"]",
+        "[\"First Strike\"]",
+        "[\"Bane\"]",
+        "[\"Flying\",\"BarrierChant\",\"BarrierRune\"]"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "Bane",
+        "BarrierChant",
+        "BarrierRune",
+        "First Strike",
+        "Flying",
+        "Quickcast",
+        "cannotRecover"
+      ]
+    },
+    "divinity": {
+      "types": [
+        "number"
+      ],
+      "examples": [
+        "2",
+        "3",
+        "10"
+      ]
+    },
+    "produce": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "Water",
+        "Darkness"
+      ],
+      "enum": [
+        "Darkness",
+        "Water"
+      ]
+    },
+    "mayProduceAwakening": {
+      "types": [
+        "array"
+      ],
+      "examples": [
+        "[\"Water\",\"Water\"]"
+      ],
+      "arrayElementTypes": [
+        "string"
+      ],
+      "enum": [
+        "Water"
+      ]
+    },
+    "alternative_face": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "SDV5-009J",
+        "SDV5-009",
+        "SDV5-011J",
+        "SDV5-011",
+        "SDV4-001"
+      ],
+      "enum": [
+        "SDV1-002",
+        "SDV1-002J",
+        "SDV1-005",
+        "SDV1-005J",
+        "SDV2-009",
+        "SDV2-009J",
+        "SDV2-011",
+        "SDV2-011J",
+        "SDV3-002",
+        "SDV3-002J",
+        "SDV3-011",
+        "SDV3-011J",
+        "SDV4-001",
+        "SDV4-001J",
+        "SDV4-008",
+        "SDV4-008J",
+        "SDV5-009",
+        "SDV5-009J",
+        "SDV5-011",
+        "SDV5-011J"
+      ]
+    },
+    "energize": {
+      "types": [
+        "string"
+      ],
+      "examples": [
+        "Darkness",
+        "Water"
+      ],
+      "enum": [
+        "Darkness",
+        "Water"
+      ]
+    },
+    "isBasic": {
+      "types": [
+        "boolean"
+      ],
+      "examples": [
+        "true"
+      ]
+    }
+  },
+  "abilities": {
+    "triggers": [
+      "activate",
+      "automatic",
+      "awakening",
+      "continuous",
+      "payCost"
+    ],
+    "events": [
+      "endTurn",
+      "enter",
+      "zoneChange"
+    ],
+    "actions": [
+      "addAbilities",
+      "addCost",
+      "addCounter",
+      "adjustStats",
+      "applyContinuousKeyword",
+      "branch",
+      "calculateTotalCost",
+      "canPayCost",
+      "cancelAbility",
+      "cardCount",
+      "checkActivateCost",
+      "checkConditionAndAbort",
+      "chooseCard",
+      "chooseCardFrom",
+      "chooseChaseEffect",
+      "chooseOne",
+      "chooseRemoveCounters",
+      "chooseTwoGroups",
+      "chooseTwoPiles",
+      "condition",
+      "dealDividedDamage",
+      "destroy",
+      "draw",
+      "filterCards",
+      "findDeckCard",
+      "getHighestCounterCount",
+      "getTotalCounterCount",
+      "log",
+      "math",
+      "modifyLP",
+      "oncePerTurn",
+      "payCost",
+      "payCustomCost",
+      "peekDeckCards",
+      "playCard",
+      "playToken",
+      "recover",
+      "reduceCost",
+      "requireChaseEffect",
+      "requireEvent",
+      "requireEventSource",
+      "requireMyTurn",
+      "rest",
+      "sendToDeck",
+      "setKeyword",
+      "shuffle",
+      "toOwnerHand",
+      "totalAtk"
+    ],
+    "actionProperties": {
+      "addAbilities": {
+        "abilities": "array",
+        "target": "string"
+      },
+      "addCost": {
+        "reduce": "array"
+      },
+      "addCounter": {
+        "amount": [
+          "number",
+          "string"
+        ],
+        "counterType": "string",
+        "isCost": "boolean",
+        "target": "string"
+      },
+      "adjustStats": {
+        "enable": "string",
+        "stats": "array",
+        "target": "string",
+        "toggleable": "number"
+      },
+      "applyContinuousKeyword": {
+        "enable": "string",
+        "keyword": "string",
+        "source": "string",
+        "target": "string"
+      },
+      "branch": {
+        "condition": "object",
+        "steps": "array"
+      },
+      "calculateTotalCost": {
+        "from": "string",
+        "value": "string"
+      },
+      "canPayCost": {
+        "cost": "array",
+        "result": "string"
+      },
+      "cancelAbility": {
+        "target": "string"
+      },
+      "cardCount": {
+        "from": "string",
+        "value": "string"
+      },
+      "checkActivateCost": {
+        "conditions": "array"
+      },
+      "checkConditionAndAbort": {
+        "conditions": "array"
+      },
+      "chooseCard": {
+        "count": "number",
+        "excludeSelf": "number",
+        "flagRequirements": "array",
+        "from": "string",
+        "isCost": "boolean",
+        "name": "string",
+        "optional": "number",
+        "owner": "number",
+        "recovered": "number",
+        "state": "string",
+        "subtype": "string",
+        "type": [
+          "array",
+          "string"
+        ],
+        "value": "string",
+        "who": "number"
+      },
+      "chooseCardFrom": {
+        "att": "string",
+        "count": "number",
+        "excludeSelf": "number",
+        "flagRequirements": "array",
+        "from": "string",
+        "name": "string",
+        "subtype": [
+          "array",
+          "string"
+        ],
+        "type": "string",
+        "value": "string"
+      },
+      "chooseChaseEffect": {
+        "count": "number",
+        "effectValue": "string",
+        "owner": "number",
+        "sourceType": "string",
+        "type": "string",
+        "value": "string"
+      },
+      "chooseOne": {
+        "options": "array",
+        "result": "string"
+      },
+      "chooseRemoveCounters": {
+        "count": "number",
+        "counterType": "string",
+        "from": "string",
+        "isCost": "boolean",
+        "owner": "number",
+        "state": "string",
+        "subtype": "string",
+        "type": "string"
+      },
+      "chooseTwoGroups": {
+        "target1": "string",
+        "target2": "string",
+        "value1": "string"
+      },
+      "chooseTwoPiles": {
+        "owner": "number",
+        "state": "string",
+        "subtype": "string",
+        "type": "array",
+        "value1": "string",
+        "value2": "string",
+        "who": "number"
+      },
+      "condition": {
+        "conditions": "array",
+        "value": "string"
+      },
+      "dealDividedDamage": {
+        "damage": "string",
+        "owner": "number",
+        "type": "string"
+      },
+      "destroy": {
+        "isCost": "boolean",
+        "target": "string",
+        "value": "string"
+      },
+      "draw": {
+        "count": "number",
+        "deck": "string",
+        "owner": "number"
+      },
+      "filterCards": {
+        "att": "string",
+        "count": "number",
+        "excludeSelf": "number",
+        "flagRequirements": "array",
+        "flags": "array",
+        "from": "string",
+        "name": [
+          "array",
+          "string"
+        ],
+        "owner": "number",
+        "produce": "string",
+        "state": "string",
+        "subtype": "string",
+        "type": [
+          "array",
+          "string"
+        ],
+        "value": "string"
+      },
+      "findDeckCard": {
+        "count": "number",
+        "filters": "object",
+        "from": "string",
+        "owner": "number",
+        "type": "string",
+        "value": "string"
+      },
+      "getHighestCounterCount": {
+        "target": "string",
+        "type": "string",
+        "value": "string"
+      },
+      "getTotalCounterCount": {
+        "target": "string",
+        "type": "string",
+        "value": "string"
+      },
+      "log": {
+        "value": "string"
+      },
+      "math": {
+        "a": "string",
+        "b": "number",
+        "op": "string",
+        "result": "string"
+      },
+      "modifyLP": {
+        "amount": "number",
+        "player": "number"
+      },
+      "oncePerTurn": {
+        "key": "string",
+        "result": "string"
+      },
+      "payCost": {
+        "cost": "array",
+        "optional": "number",
+        "result": "string",
+        "type": "string"
+      },
+      "payCustomCost": {
+        "type": "string",
+        "value": "string"
+      },
+      "peekDeckCards": {
+        "count": [
+          "number",
+          "string"
+        ],
+        "deckSide": "string",
+        "from": "string",
+        "owner": "number",
+        "value": "string"
+      },
+      "playCard": {
+        "from": "string"
+      },
+      "playToken": {
+        "dataCard": "object",
+        "owner": "number"
+      },
+      "recover": {
+        "target": "string"
+      },
+      "reduceCost": {
+        "reduce": "array"
+      },
+      "requireChaseEffect": {
+        "owner": "number",
+        "sourceType": "string",
+        "type": "string",
+        "value": "string"
+      },
+      "requireEvent": {
+        "from": "string",
+        "to": "string",
+        "value": "string"
+      },
+      "requireEventSource": {
+        "source": "string",
+        "value": "string"
+      },
+      "requireMyTurn": {
+        "value": "string"
+      },
+      "rest": {
+        "isCost": "boolean",
+        "target": "string"
+      },
+      "sendToDeck": {
+        "from": "string",
+        "isCost": "boolean",
+        "owner": "number",
+        "target": "string",
+        "top": "number"
+      },
+      "setKeyword": {
+        "enable": [
+          "number",
+          "string"
+        ],
+        "keyword": "string",
+        "target": "string",
+        "untilEndOfTurn": "number",
+        "value": "number"
+      },
+      "shuffle": {
+        "owner": "number",
+        "target": "string"
+      },
+      "toOwnerHand": {
+        "target": "string"
+      },
+      "totalAtk": {
+        "target": "string",
+        "value": "string"
+      }
+    }
+  }
+}

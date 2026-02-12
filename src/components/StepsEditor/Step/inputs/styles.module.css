@@ -1,0 +1,51 @@
+.input {
+	flex-direction: column;
+	display: flex;
+}
+.objectContainer {
+	flex-direction: column;
+	display: flex;
+}
+
+.button {
+	color: #94a3b8;
+	cursor: pointer;
+	background: #020617;
+	border: 1px solid #334155;
+	border-radius: 4px;
+	width: fit-content;
+	padding: 4px 8px;
+}
+
+.button:hover {
+	color: #e5e7eb;
+	border-color: #64748b;
+}
+
+.objectItem {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	border: 1px solid #334155;
+	padding: 8px;
+}
+.objectList {
+	border: 1px solid #334155;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.fieldSet {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+.input select {
+	text-align: center;
+}
+
+.objectItem button {
+}
