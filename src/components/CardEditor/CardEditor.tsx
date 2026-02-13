@@ -24,7 +24,7 @@ type CardData = {
 };
 
 export default function CardEditor() {
-	const [card, setCard] = useState<CardData>({
+	const initialData: CardData = {
 		id: "",
 		name: "",
 		type: [],
@@ -33,10 +33,38 @@ export default function CardEditor() {
 		def: "",
 		text: "",
 		att: [],
-		image: "https://fowsim.s3.amazonaws.com/media/cards/CMB-068.jpg",
+		image: "",
 		abilities: [],
 		cost: [],
-	});
+	};
+
+	const [card, setCard] = useState<CardData>(initialData);
+	useEffect(() => {
+		const savedCard = localStorage.getItem("card-editor-cache");
+		if (savedCard) {
+			try {
+				setCard(JSON.parse(savedCard));
+			} catch (e) {
+				console.error("Error", e);
+			}
+		} else {
+			setCard((prev) => {
+				return {
+					...prev,
+					image: "https://fowsim.s3.amazonaws.com/media/cards/CMB-068.jpg",
+				};
+			});
+		}
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem("card-editor-cache", JSON.stringify(card));
+	}, [card]);
+
+	// Opcional: Función para limpiar el cache al terminar o resetear
+	const clearCache = () => {
+		localStorage.removeItem("card-editor-cache");
+	};
 
 	const update = (key: keyof CardData, value: any) => {
 		setCard((prev) => ({ ...prev, [key]: value }));
@@ -152,7 +180,7 @@ export default function CardEditor() {
 			{/* PREVIEW */}
 			<div className={styles.panel}>
 				<div className={styles.cardImage}>
-					<img src={card.image} />
+					{card.image && <img src={card.image} alt={card.name} />}
 				</div>
 				<div style={{ position: "relative" }}>
 					<button
